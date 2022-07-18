@@ -46,20 +46,124 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+@for $distance from 0 through 12 {
+    .p-#{$distance} {
+        padding: ($distance * 0.5) + rem;
+    }
+    .m-#{$distance} {
+        margin: ($distance * 0.5) + rem;
+    }
+	.pt-#{$distance} {
+		padding-top: ($distance * 0.5) + rem;
+	}
+	.pb-#{$distance} {
+		padding-bottom: ($distance * 0.5) + rem;
+	}
+	.pr-#{$distance} {
+		padding-right: ($distance * 0.5) + rem;
+	}
+	.pl-#{$distance} {
+		padding-left: ($distance * 0.5) + rem;
+	}
+	.mt-#{$distance} {
+		margin-top: ($distance * 0.5) + rem;
+	}
+	.mb-#{$distance} {
+		margin-bottom: ($distance * 0.5) + rem;
+	}
+	.mr-#{$distance} {
+		margin-right: ($distance * 0.5) + rem;
+	}
+	.ml-#{$distance} {
+		margin-left: ($distance * 0.5) + rem;
+	}
+}
+
+
+
+
+
 body {
     font-family: PingFangTC-Regular, sans-serif;
     line-height: 1.5;
+	font-size: 24px;
 }
 h1{
     font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-size: 80px;
     line-height: 95px;
+	padding-bottom: 22px;
+	border-bottom: 2px solid #000;
+}
+h2{
+	font-size: 32px;
+	font-weight: bold;
+	padding-bottom: 7px;
+	span{
+		font-size: 24px;
+		font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+		color: #A00404;
+		vertical-align: 2px;
+	}
+}
+h3{
+	font-weight: bold;
+}
+.color-white{
+	color: #fff;
+}
+.d-flex{
+	display: flex;
+}
+.justify-content-center{
+	justify-content: center;
 }
 
 
 .container{
-    max-width: 1232px;
+    max-width: 1200px;
     padding-right: 2rem;
     padding-left: 2rem;
     margin: 0 auto;
+}
+.py-container{
+	padding-right: 129px;
+	padding-left: 129px;
+}
+
+.border-bottom{
+	border-bottom:1px solid #000;
+}
+.border-left{
+	border-left: 1px solid #fff;
+}
+
+.skill{
+	background: #415165;
+	h2{
+		text-align: center;
+		border-bottom-color: #fff;
+	}
+}
+.skill-list{
+	width: 225px;
+	margin: 0 auto;
+}
+.work{
+	ul{
+		border-left-color: #96A9C4;
+	}
+	&-text{
+		width: 55%;
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+.contact{
+	background: #415165;
+	text-align: center;
+	h2{
+		border-bottom-color: #fff;
+	}
 }
